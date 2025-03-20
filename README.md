@@ -2,39 +2,52 @@
 
 Constraint Satisfaction Problem Solver
 
-This is a library for expressing and solving constraint satisfaction problems, in pure JavaScript. Currently it only solves discrete finite-domain problems, and provides a couple of solvers. In the future I hope to support infinite-domain problems and continuous problems as well.
+This is a TypeScript library for expressing and solving constraint satisfaction problems. It solves discrete finite-domain problems via recursive backtracking.
 
 ## Example
 
-	var p = csp.DiscreteProblem();
-	
-	p.addVariable("a", [1,2,3]);
-	p.addVariable("b", [4,5,6]);
-	p.addVariable("c", [6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]);
-	
-	p.addConstraint(
-		["a", "b"],
-		function(a, b) { return a*2 === b; }
-	);
+Install the package via:
 
-	p.addConstraint(
-		["b", "c"],
-		function(b, c) { return b*2 === c; }
-	);
-	
-	var one_solution = p.getSolution();
-	var all_solutions = p.getSolutions();
+```
+npm install csp-js
+```
 
-## Solvers and Problems we support
+It can then be used like so:
 
-Currently we support finite-domain problems, with the following solvers:
+```js
+// ES Module
+import { CSP } from "csp-js";
 
-- Recursive Backtracking
-- Forward-Checking (in progress)
-- AC3 Arc Consistency (in progress)	
+// CommonJS
+// const { CSP } = require("csp-js");
+
+const csp = new CSP();
+
+csp.addVariable("a", [1,2,3]);
+csp.addVariable("b", [4,5,6]);
+csp.addVariable("c", [6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]);
+
+csp.addConstraint(
+	["a", "b"],
+	function(a, b) { return a*2 === b; }
+);
+
+csp.addConstraint(
+	["b", "c"],
+	function(b, c) { return b*2 === c; }
+);
+
+// { a: 2, b: 4, c: 8 }
+const oneSolution = csp.getSingleSolution();
+console.log(oneSolution);
+
+// [ { a: 2, b: 4, c: 8 }, { a: 3, b: 6, c: 12 } ]
+const allSolutions = csp.getAllSolutions();
+console.log(allSolutions);
+```
 
 ## Intro to CSPs
-	
+
 ### What is a CSP?
 
 A Constraint Satisfaction Problem is formally defined as:
@@ -70,4 +83,6 @@ There are tons and tons of problems that can reduce to constraint satisfaction p
 
 ## Credits
 
-This project started as a port of the [python-constraint](http://labix.org/python-constraint) library
+This project started as a port of the [python-constraint](http://labix.org/python-constraint) library.
+
+It was originally developed by [Niels Joubert](https://github.com/njoubert/csp.js) before I modernized the project for the current JavaScript ecosystem.
