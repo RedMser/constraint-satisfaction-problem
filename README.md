@@ -2,6 +2,8 @@
 
 Constraint Satisfaction Problem Solver
 
+[![npm version](https://badge.fury.io/js/csp-js.svg)](https://badge.fury.io/js/csp-js) ![GitHub Tests](https://github.com/RedMser/csp.js/actions/workflows/test.yml/badge.svg)
+
 This is a TypeScript library for expressing and solving constraint satisfaction problems. It solves discrete finite-domain problems via recursive backtracking.
 
 ## Example
