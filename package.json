@@ -1,5 +1,5 @@
 {
-  "name": "csp-js",
+  "name": "constraint-satisfaction-problem",
   "version": "0.0.1",
   "description": "Constraint Satisfaction Problem Solving (CSP): A Constraint solver in JavaScript",
   "license": "MIT",
@@ -12,17 +12,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/RedMser/csp.js.git"
+    "url": "http://github.com/RedMser/constraint-satisfaction-problem.git"
   },
   "bugs": {
-    "url": "https://github.com/RedMser/csp.js/issues"
+    "url": "https://github.com/RedMser/constraint-satisfaction-problem/issues"
   },
   "scripts": {
     "build": "rollup -c",
     "benchmark": "jest --projects ./jest-bench.config.js",
     "test": "jest"
   },
-  "homepage": "https://github.com/RedMser/csp.js",
+  "homepage": "https://github.com/RedMser/constraint-satisfaction-problem",
   "devDependencies": {
     "@rollup/plugin-typescript": "^12.1.2",
     "@types/jest": "^29.5.14",

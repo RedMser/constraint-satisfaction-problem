@@ -1,27 +1,26 @@
-# CSP.JS
+# Constraint Satisfaction Problem Solver
 
-Constraint Satisfaction Problem Solver
+[![npm version](https://badge.fury.io/js/constraint-satisfaction-problem.svg)](https://badge.fury.io/js/constraint-satisfaction-problem) ![GitHub Tests](https://github.com/RedMser/constraint-satisfaction-problem/actions/workflows/test.yml/badge.svg)
 
-[![npm version](https://badge.fury.io/js/csp-js.svg)](https://badge.fury.io/js/csp-js) ![GitHub Tests](https://github.com/RedMser/csp.js/actions/workflows/test.yml/badge.svg)
-
-This is a TypeScript library for expressing and solving constraint satisfaction problems. It solves discrete finite-domain problems via recursive backtracking.
+This is a TypeScript library for expressing and solving constraint satisfaction problems, originally developed by [Niels Joubert](https://github.com/njoubert/csp.js).
+It solves discrete finite-domain problems via recursive backtracking.
 
 ## Example
 
 Install the package via:
 
 ```
-npm install csp-js
+npm install constraint-satisfaction-problem
 ```
 
 It can then be used like so:
 
 ```js
 // ES Module
-import { CSP } from "csp-js";
+import { CSP } from "constraint-satisfaction-problem";
 
 // CommonJS
-// const { CSP } = require("csp-js");
+// const { CSP } = require("constraint-satisfaction-problem");
 
 const csp = new CSP();
 
@@ -87,4 +86,5 @@ There are tons and tons of problems that can reduce to constraint satisfaction p
 
 This project started as a port of the [python-constraint](http://labix.org/python-constraint) library.
 
-It was originally developed by [Niels Joubert](https://github.com/njoubert/csp.js) before I modernized the project for the current JavaScript ecosystem.
+This library was originally developed by [Niels Joubert](https://github.com/njoubert/csp.js).
+I have taken his code and modernized it to current JavaScript ecosystem standards, for publishing on NPM.
