@@ -1,6 +1,6 @@
 {
   "name": "constraint-satisfaction-problem",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Constraint Satisfaction Problem Solving (CSP): A Constraint solver in JavaScript",
   "license": "MIT",
   "main": "dist/index.cjs",
