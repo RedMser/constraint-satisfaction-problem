@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Constraint Satisfaction Problem Solving (CSP): A Constraint solver in JavaScript",
   "license": "MIT",
+  "keywords": ["discrete", "finite-domain", "recursive", "backtracking"],
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
