@@ -3,7 +3,7 @@
 [![npm version](https://badge.fury.io/js/constraint-satisfaction-problem.svg)](https://badge.fury.io/js/constraint-satisfaction-problem) ![GitHub Tests](https://github.com/RedMser/constraint-satisfaction-problem/actions/workflows/test.yml/badge.svg)
 
 This is a TypeScript library for expressing and solving constraint satisfaction problems, originally developed by [Niels Joubert](https://github.com/njoubert/csp.js).
-It solves discrete finite-domain problems via recursive backtracking.
+It can currently solve discrete finite-domain problems via recursive backtracking.
 
 ## Example
 
@@ -17,12 +17,12 @@ It can then be used like so:
 
 ```js
 // ES Module
-import { CSP } from "constraint-satisfaction-problem";
+import { DiscreteFiniteProblem, RecursiveBacktrackingSolver } from "constraint-satisfaction-problem";
 
 // CommonJS
-// const { CSP } = require("constraint-satisfaction-problem");
+// const { DiscreteFiniteProblem, RecursiveBacktrackingSolver } = require("constraint-satisfaction-problem");
 
-const csp = new CSP();
+const csp = new DiscreteFiniteProblem(new RecursiveBacktrackingSolver());
 
 csp.addVariable("a", [1,2,3]);
 csp.addVariable("b", [4,5,6]);
